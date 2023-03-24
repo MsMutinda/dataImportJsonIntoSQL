@@ -14,7 +14,7 @@ with open('products.csv', 'r') as csvfile:
             product['image'] = row[1]
             product['name'] = row[2]
             product['brand'] = row[2].split(' ')[0]
-            product['price'] = row[3].replace('KES ', '')
+            product['price'] = row[3].replace('KES ', '').replace(",", "")
 
             text = ''
             num = ''
